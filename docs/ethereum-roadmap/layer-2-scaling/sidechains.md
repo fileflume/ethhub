@@ -21,7 +21,9 @@ Sidechains are responsible for their own security and consensus processes. This 
 
 *Proof-of-Authority*: Validators (network nodes responsible for signing transactions and maintaing a consistent ledger) are pre-selected for the protocol. An example is the [POA Network](https://poa.network). POA uses an Authority Round consensus where selected validators, in this case US Notary Publics with public reputations at stake, take turns signing transactions and sealing blocks. The POA model improves scalability (5 second block times, low transaction fees) while sacrificing a degree of decentralization (validators are pre-selected and the protocol has a limited validator set).
 
-*Proof-of-Stake*: A set of validators are selected based on the staking amount they commit to the protocol. Nodes which have placed more stake are more likely to be selected as validators. With delegated proof-of-stake, users can add additional staking amounts to a node, serving to increase that node's likelihood of becoming a validator. An example is the [xDai chain](https://xdaichain.com), where nodes who commit a higher amount of STAKE (the xDai governance token, staked by both validator candidates and delegators) into the protocol have a higher probability of selection to a dynamic validator set. Once selected, staking incentives promote honest validation. 
+*Proof-of-Stake*: A set of validators are selected based on the staking amount they commit to the protocol. Nodes which have placed more stake are more likely to be selected as validators. With delegated proof-of-stake, users can add additional staking amounts to a node, serving to increase that node's likelihood of becoming a validator. An example is the [xDai chain](https://xdaichain.com), where nodes who commit a higher amount of STAKE (the xDai governance token, staked by both validator candidates and delegators) into the protocol have a higher probability of selection to a dynamic validator set. Once selected, staking incentives promote honest validation.
+
+It is possible to combine these two security approaches, such that a fixed number of validators (defined as all those validators who meet a minimum stake requirement in a particular epoch) take a round robin approach to signing transactions and sealing blocks. An example is the [Fuse Network](https://fuse.io), which combines the scalability and low fees of the POA model with staking incentives to promote honest validation. 
 
 Sidechains also rely on different Byzantine Fault Tolerant methods to ensure consensus. Examples include Peppermint BFT used by the [Matic Network](https://matic.network/) and Asynchronous Binary Byzantine Agreement by [Skale](https://skale.network/).
 
@@ -39,6 +41,7 @@ The [TokenBridge](https://docs.tokenbridge.net/) application exemplifies this ar
 
 
 * [POA Network](https://poa.network)
+* [Fuse Network](https://fuse.io)
 * [xDai Stable Chain](https://xdaichain.com)
 * [SKALE](https://skale.network/)
 * [Matic](https://matic.network/) 
